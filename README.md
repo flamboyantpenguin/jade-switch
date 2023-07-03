@@ -16,7 +16,9 @@ encrypts a file named hello.txt with the given password and level 2[^0] encrypti
 
 
 
+Powered by
 
+![DAWN Logo](https://github.com/flamboyantpenguin/jade-switch/assets/49310641/aafe629d-ddf1-4ff6-8dbf-c83c8675dfea)
 
 
 
