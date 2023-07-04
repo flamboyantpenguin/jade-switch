@@ -14,7 +14,7 @@ An existing file can be encrypted as .fje format by using the tilda.eFile() meth
 
 A file named Hello.fje will be created with the given password and level[^0].
 
-    Warning: Passwords must contain more than one character as there should be atleast 2 characters in the passkey for bses algortithm to function properly. Passwords should contain atleast 8 letters for recommended security.
+>Warning: Passwords must contain more than one character as there should be atleast 2 characters in the passkey for bses algortithm to function properly. Passwords should contain atleast 8 letters for recommended security.
 
 The following code decrypts the archive.
 
