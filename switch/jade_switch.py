@@ -1,6 +1,6 @@
-#Jade Switch 1.0 Pre-Alpha
+#Jade Switch 1.0
 #Made by DAWN/ペンギン
-#Last Updated: 03-06-2023
+#Last Updated: 26-07-2023
 
 
 import string

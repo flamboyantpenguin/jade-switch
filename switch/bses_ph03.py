@@ -16,14 +16,20 @@ def switch(data, key, level):
     def binswap(k):
         r = ''
         l = list(k)
-        for i in range(0, len(l)-1, 2):
-            l[i+1], l[i] = l[i],l[i+1]
-        for i in l:
-            r+=i
+        for i in range(0, len(l)-1, 2): l[i+1], l[i] = l[i],l[i+1]
+        for i in l: r+=i
+        return r
+    
+    
+    def reverse(s):
+        r = ''
+        l = list(s)
+        for i in reversed(l): r+=i
         return r
 
 
     sData = ''
+    key = reverse(key)
     key = binswap(key)
 
 
@@ -31,7 +37,7 @@ def switch(data, key, level):
         case 0:
             num = 0
             for i in data:
-                if key[num] == '1':
+                if ord(key[num]) % 2 == 0:
                     sData+=str(int(not int(i)))
                 else: 
                     sData+=i
