@@ -1,7 +1,7 @@
 #DAWN Simple Binary Encryption System
-#Version 0.1
+#Version 1.0
 #Made by DAWN/ペンギン
-#Last Updated: 04-06-2023
+#Last Updated: 02-08-2023
 
 def switch(data, key, level):
 
@@ -45,26 +45,36 @@ def switch(data, key, level):
                 if num == len(key)-1: num = 0
         case 1:
             num = 0
-            for i in range(len(data)):
-                if i % 2 == 0 and key[num] == '0':
-                    sData+=str(int(not int(data[i])))
-                else:
-                    sData+=data[i]
+            for i in data:
+                if key[num].isalpha():
+                    if ord(key[num]) % 2 != 0:
+                        sData+=str(int(not int(i)))
+                    else: 
+                        sData+=i
+                elif key[num].isalnum():
+                    if ord(key[num]) % 2 == 0:
+                        sData+=str(int(not int(i)))
+                    else: 
+                        sData+=i
+                else: 
+                    sData+=i
                 num+=1
                 if num == len(key)-1: num = 0
         case 2: 
             num = 0
-            for i in range(len(data)):
-                if isPrime(i) and key[num] == '0':
-                    sData+=str(int(not int(data[i])))
-                else:
-                    sData+=data[i]
-                num+=1
-                if num == len(key)-1: num = 0
-        case 3:
-            num = 0
             for i in data:
-                sData+=str(int(key[num]) ^  int(i))
+                if ord(key[num]) % 3 == 0:
+                    if key[num].isdigit() and int(key[num]) % 2 == 0:
+                        sData+=str(int(not int(i)))
+                    else: 
+                        sData+=i
+                elif ord(key[num]) % 2 == 0:
+                    if key[num].isdigit() and int(key[num]) % 4 == 0:
+                        sData+=str(int(not int(i)))
+                    else: 
+                        sData+=i
+                else: 
+                    sData+=str(int(not int(i)))
                 num+=1
                 if num == len(key)-1: num = 0
     
